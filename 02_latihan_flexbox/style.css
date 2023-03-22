@@ -1,0 +1,236 @@
+/* Begin of style */
+
+
+
+html body {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	line-height: 1.65;
+	padding-bottom: 1000px;
+}
+
+
+/* Latihan 1 */
+
+.container-satu {
+	width: 800px;
+	margin: 50px auto;
+	background-color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+
+.kolom-utama {
+	flex: 3;
+	order: 2;
+}
+
+
+.sidebar-satu {
+	flex: 1;
+	order: 1;
+}
+
+
+.sidebar-satu ul {
+	display: ;
+}
+
+
+.sidebar-dua {
+	flex: 1;
+	order: 3;
+}
+
+/* Akhir latihan 1 */
+
+
+
+/* Latihan 2 */
+
+.container-dua {
+	max-width: 800px;
+	margin: 50px auto;
+	
+}
+
+
+.layanan {
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+
+.layanan.satu {
+	background-color: #7D7DF5;
+}
+
+
+.layanan.dua {
+	background-color: #88F188;
+}
+
+
+.layanan.tiga {
+	background-color: #FF8F8F;
+}
+
+/* Akhir latihan 2 */
+
+
+
+/* Latihan 3 */
+
+.container-tiga {
+	max-width: 800px;
+	margin: 50px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.thumbnail {
+	width: 50%;	
+}
+
+
+.thumbnail img {
+	width: 100%;
+}
+
+/* Akhir Latihan 3 */
+
+
+/* Latihan 4 */
+
+.container-empat {
+	max-width: 800px;
+	margin: 50px auto;
+	
+}
+
+
+.card {
+	border: 3px solid #B6B6B6;
+	border-radius: 10px;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 20px;
+	flex: 1;
+}
+
+.card .header {
+	height: 150px;
+	background-color: #666;
+}
+
+
+.card .content {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+
+.card.besar {
+	transform: scale(1.07, 1.07);
+}
+
+/* Akhir latihan 4 */
+
+
+
+/* Latihan 5 */
+
+.container-lima {
+	max-width: 500px;
+	height: 500px;
+	margin: 50px auto;
+	border: 5px solid black;
+	display: flex;
+}
+
+
+.kotak {
+	max-width: 100px;
+	height: 100px;
+	background-color: sandybrown;
+	margin: auto;
+	color: white;
+	text-align: center;
+}
+
+
+.kotak span {
+	margin: auto;
+	
+}
+
+/* Akhir latihan 5 */
+
+
+
+/* Responsive */
+
+@media( min-width: 650px ) {
+
+	/* Latihan 2 */
+	.container-dua {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	
+	.layanan {
+		width: 30%;
+	}
+	/* Akhir latihan 2 */
+
+
+	/* Latihan 3 */
+	.thumbnail {
+		width: 25%;
+	}
+	/* Akhir latihan 3 */
+
+
+	/* Latihan 4 */
+	.container-empat {
+		display: flex;
+	}
+
+
+	.card {
+		margin: 10px;
+	}
+
+
+	.card.besar {
+		transform: scale(1.12, 1.12);
+	}
+	/* Akhir latihan 4 */
+
+
+	/* Latihan 5 */
+
+	.container-lima {
+		margin: 50px auto;
+	}
+
+	/* Akhir latiahn 5 */
+}
+
+/* Akhir responsive */
+
+
+
+/* End od style

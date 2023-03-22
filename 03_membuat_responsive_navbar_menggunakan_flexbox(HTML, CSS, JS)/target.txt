@@ -1,0 +1,30 @@
+Cara - cara untuk menarget html:
+
+A. Menggunakan konsep inheritance
+	1. Menggunakan teknik parent child
+		Misalnya kita mau menarget 1 anak dari parent. Kita bisa menggunakan:
+		a. :first-child
+			first-child itu digunakan untuk anak yang pertama.
+
+		b. :last-child
+			last-child itu digunakan untuk anak yang terakhir.
+
+		c. :nth-child
+			nth-child itu digunakan untuk menarget anak yang kita tentukan dengam angka. Misal nth-child(10).
+
+			Misal:
+
+			.menu-toggle span:nth-child(2) {
+				background-color: blue;
+			}
+
+	2. Menggunakan teknik siblings(saudara kandung)
+		Salah satu teknik Css yaitu siblings ini, digunakan ketika salah satu elemen dalam satu parent kita beri aksi, lalu kita ingin memunculkan aksi dari saudara kandungnya yang lain.
+
+		syntax: ~
+
+		Misal:
+
+		.menu-toggle input:checked ~ span:nth-child(2) {
+			background-color: red;
+		}

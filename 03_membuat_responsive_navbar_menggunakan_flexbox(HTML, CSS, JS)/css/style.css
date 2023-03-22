@@ -1,0 +1,178 @@
+/*Begin of style */
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+
+
+/* Navbar */
+
+nav {
+	display: flex;
+	background-color: #00BFFF;
+	justify-content: space-around;
+	height: 50px;
+	align-items: center;
+	color: #E2F8FF;
+}
+
+
+/* Logo */
+nav .logo {
+	font-family: 'Pacifico', cursive;
+	letter-spacing: 3px;
+}
+
+
+/* Menu */
+nav ul {
+	display: flex;
+	list-style: none;
+	width: 40%;
+	justify-content: space-between;
+}
+
+
+nav ul li a {
+	color: #E2F8FF;
+	text-decoration: none;
+	font-size: 0.85em;
+}
+
+
+nav ul li a:hover {
+	color: #FAFEFF;
+}
+
+
+/* Humberger Menu */
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+}
+
+
+.menu-toggle input {
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	left: -6px;
+	top: -3px;
+	opacity: 0;
+	z-index: 5;
+	cursor: pointer;
+}
+
+
+.menu-toggle span {
+	display: block;
+	width: 28px;
+	height: 3px;
+	background-color:  #E2F8FF;
+	border-radius: 3px;
+	transition: all 455ms;
+	transform: scale(1);
+}
+
+
+
+/* Humberger menu animation */
+
+.menu-toggle span:nth-child(2) {
+	transform-origin: 0 0;
+	/* transforms origin digunakan untuk menentukan poros.
+	transform-origin: sumbu(x) sumbu(y);*/
+}
+
+
+.menu-toggle span:nth-child(4) {
+	transform-origin:0 100% ;
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+	background-color: white;
+	transform: rotate(45deg) translate( 0px, 1px);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+	background-color: white;
+	transform: rotate(-45deg) translate(-3px, 0);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+	opacity: 0;
+	transform: scale(0);
+}
+
+/* Akhir dari Navbar */
+
+
+
+/* Responsive */
+
+/* Ukuran tablet */
+@media screen and (max-width: 768px) {
+	nav ul {
+		width: 50%;
+	}
+}
+
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px) {
+	/* Navbar */
+	nav ul {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 75%;
+		height: 100vh;
+		/* vh itu singkatan dari viewport height.
+		Maksudnya itu tinggi dari layar yang kita lihat.*/
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		background-color: #69D6FB;
+		z-index: -2;
+		transform: translateX(100%);
+		transition: all 800ms;
+		opacity: 0;
+	}
+
+	/* Merubah ul yang semula tidak ada kelas slide
+	menjadi ul yang ada kelas slide, itu dengan bantuan
+	javascript. */
+
+	nav ul.slide {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	/* Hamburger menu */
+	.menu-toggle {
+		display: flex;
+	}
+}
+
+/* Akhir Responsive */
+
+
+
+/* End of style

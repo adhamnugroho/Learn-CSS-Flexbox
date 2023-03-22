@@ -1,0 +1,151 @@
+Flex Box (Flexible Box Module)
+
+Flex Box adalah teknik CSS yang digunakan untuk membantu kita melayout / mengatur posisi sebuah halaman website.
+
+
+A. Istilah pada Flex Box
+	1. main axis
+		Main axis adalah sumbu utama dari sebuah container yang menentukan urutan dari penempatan items secara horizontal.
+
+	2. main-start | main-end
+		main-start | main-end adalah mulai dan berakhirnya items yang disimpan di dalam container.
+
+	3. main-size
+		main-size adalah ukuran (width / height) dari container yang akan membuat dimensi dari itemsnya relatif terhadap main size.
+
+B. Property pada container
+	Kalau kita mau flexnya berjalan dengan baik, maka kita harus menambahkan property pada elemen dan pembukus elemennya.
+		1. display
+
+			.container {
+				display: flex; /* atau inline-flex */
+			} 
+
+			Flex-nya tidak akan berjalan, kalau pembungkusnya tidak diberi property {display: flex;} atau {inline-flex}.
+
+			Tujuan pemberian {display:flex;} adalah membuat sebuah elemen parent menjadi flex-box, dan membuat elemen - elemen di dalamnya bisa berperilaku flex juga.
+
+
+		2. flex direction
+			flex-direction digunakan untuk mengatur arah / mengatur alur dari urutan elemen - elemen didalamnya. Bisa secara horizontal / sebaliknya, bisa secara vertikal / sebaliknya.
+
+			syntax:
+
+			.container {
+				flex-direction: row | row-reverse | column | column-reverse;
+			}
+
+
+		3. flex-wrap
+			flex-warp ini digunakan ketika elemen yang kita gunakan itu sudah tidak muat lagi pada container(dalam barisnya).
+
+			syntax:
+
+			.container {
+				flex-wrap: nowrap | wrap | wrap-reverse;
+			}
+
+
+		4. justify-content
+			justify-content digunakan untuk mengatur kesejajaran dari elemen - elemen di dalamnya secara horizontal.
+
+			value yang bisa digunakan:
+				a. flex-start
+					digunakan untuk mengatur elemen rata kiri.
+
+				b. flex-end
+					digunakan untuk mengatur elemen rata kanan.
+
+				c. center
+					digunakan untuk mengatur elemen tepat di tengah.
+
+				d. space-between
+					elemen pertama akan mepet kiri, elemen kedua dan seterusnya diberi jarak yang sama, elemen terakhir akan mepet ke kanan.
+
+				e. space-around
+					digunakan untuk membagi rata sisi kiri dan kanan per tiap elemen.
+
+				f. space-evenly
+					ketiga elemen dikelilingi dengan jarak yang sama.
+
+			syntax:
+
+			.container {
+				justify-content: flex-start | flex-end | center | space-between | space-around | space_evenly;
+			}
+
+
+		5. align-items
+			digunakan untuk mengatur kesejajaran elemen secara vertikal.
+				1. flex-start
+					digunakan untuk mengatur elemen rata atas.
+
+				2. flex-end
+					digunakan untuk mengatur elemen rata bawah.
+
+				3. center
+					digunakan untuk mengatur elemen rata tengah.
+
+				4. strecth
+					strecth ini digunakan saat kita tidak memberikan height pada itemsnya. 
+					kalau kita menggunakan value ini,  dia akan membuat items yang didalam pembungkusnya tertarik memenuhi tinggi pembungkusnya. 
+
+				5. baseline
+					digunakan untuk mengatur posisi berdasarkan baselinenya. 
+					Misalnya di dalam elemen tersebut ada teks, maka yang dijadikan baselinenya adalah teksnya.
+
+
+		6. align-content
+			Sama seperti align-items, tapi ini berlaku ketika kontennya lebih dari satu baris.
+
+				a. flex-start
+
+				b. flex-end
+
+				c. center
+
+				d. strech
+
+				e. space-between
+
+				f. space-around
+
+C. Property pada items
+	Property ini digunakam pada itemsnya bukan pada pembungkusnya.
+	1. order
+		digunakan untuk mengatur urutan dari elemen - elemennya. 
+
+		syntax:
+
+		.satu { order: 2;}
+		.dua {order: 3;}
+		.tiga {order: 4;}
+		.empat{order: 1;}
+
+
+	2. flex-grow / flex(shorthand)
+		digunakan untuk mengatur ukuran items.
+
+		syntax:
+
+		.container .dua {
+			flex-grow: 3;
+		}
+
+		apabila kita menambahkan flex-grow pada satu elemen saja, maka elemen yang lain akan menyesuaikan dengan ukuran elemen pembungkusnya.
+
+
+	3. align-self
+		digunakan untuk mengatur kesejajaran elemen secara vertikal. align-self ini sama seperti align-items, tapi align-self ini hanya bisa digunakan pada itemsnya, bukan pada pembungkus elemennya.
+
+			a. auto
+
+			b. flex-start
+
+			c. flex-end
+
+			d. center
+
+			e. baseline
+
+			f. strecth
